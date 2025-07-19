@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мой список для чтения</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reading-list.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>📖 Мой список для чтения</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="genres.html">Жанры</a>
+      <a href="favorites.html">Избранное</a>
+      <a href="reading-list.html" class="active">Список для чтения</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="reading-list-container">
+      <div class="add-book">
+        <input type="text" id="bookInput" placeholder="Название книги">
+        <select id="bookPriority">
+          <option value="high">Высокий приоритет</option>
+          <option value="medium" selected>Средний приоритет</option>
+          <option value="low">Низкий приоритет</option>
+        </select>
+        <button id="addBookBtn">Добавить</button>
+      </div>
+
+      <div class="filter">
+        <button class="filter-btn active" data-filter="all">Все книги</button>
+        <button class="filter-btn" data-filter="high">Высокий приоритет</button>
+        <button class="filter-btn" data-filter="medium">Средний приоритет</button>
+        <button class="filter-btn" data-filter="low">Низкий приоритет</button>
+      </div>
+
+      <div id="bookList"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Моя книжная полка</p>
+  </footer>
+
+  <script src="js/reading-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Жанры книг</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Жанры книг</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="genres.html" class="active">Жанры</a>
+      <a href="favorites.html">Избранное</a>
+      <a href="contact.html">Контакты</a>
+      <a href="reading-list.html">Список для чтения</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Популярные жанры:</h2>
+    <div class="genre-cards">
+      <!-- Фэнтези -->
+      <div class="genre-card" onclick="showBooks('fantasy')">
+        <img src="img/fantasy.jpg" alt="Фэнтези">
+        <h3>Фэнтези</h3>
+        <p>Мир магии, мифических существ и эпических приключений.</p>
+      </div>
+      
+      <!-- Научная фантастика -->
+      <div class="genre-card" onclick="showBooks('scifi')">
+        <img src="img/scifi.jpg" alt="Научная фантастика">
+        <h3>Научная фантастика</h3>
+        <p>Исследование будущего, технологий и космоса.</p>
+      </div>
+      
+      <!-- Детектив -->
+      <div class="genre-card" onclick="showBooks('detective')">
+        <img src="img/detective.jpg" alt="Детектив">
+        <h3>Детектив</h3>
+        <p>Загадки, преступления и их расследования.</p>
+      </div>
+      
+      <!-- Роман -->
+      <div class="genre-card" onclick="showBooks('novel')">
+        <img src="img/novel.jpg" alt="Роман">
+        <h3>Роман</h3>
+        <p>Истории о любви, отношениях и человеческих чувствах.</p>
+      </div>
+      
+      <!-- Триллер -->
+      <div class="genre-card" onclick="showBooks('thriller')">
+        <img src="img/thriller.jpg" alt="Триллер">
+        <h3>Триллер</h3>
+        <p>Напряженные истории с элементами опасности и саспенса.</p>
+      </div>
+    </div>
+
+    <!-- Списки книг по жанрам (изначально скрыты) -->
+    <div id="fantasy-books" class="book-list" style="display:none;">
+      <h3>Лучшие книги в жанре Фэнтези:</h3>
+      <div class="book-item">
+        <a href="https://1.librebook.me/harry_potter_and_the_sorcerer_s_stone" target="_blank">
+          <img src="img/harrypotter.jpg" alt="Гарри Поттер" class="book-cover">
+          <div class="book-info">
+            <h4>Гарри Поттер и философский камень</h4>
+            <p>Автор: Дж. К. Роулинг</p>
+            <p>Мальчик-сирота узнаёт, что он волшебник и отправляется в школу магии Хогвартс.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="book-item">
+        <a href="https://1.librebook.me/the_lord_of_the_rings" target="_blank">
+          <img src="img/lotr.jpg" alt="Властелин Колец" class="book-cover">
+          <div class="book-info">
+            <h4>Властелин Колец</h4>
+            <p>Автор: Дж. Р. Р. Толкин</p>
+            <p>Эпическое путешествие по Средиземью с целью уничтожения Кольца Всевластья.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="scifi-books" class="book-list" style="display:none;">
+      <h3>Лучшие книги в жанре Научная фантастика:</h3>
+      <div class="book-item">
+        <a href="https://opentextnn.ru/old/man/index.html@id=5134" target="_blank">
+          <img src="img/1984.jpg" alt="1984" class="book-cover">
+          <div class="book-info">
+            <h4>1984</h4>
+            <p>Автор: Джордж Оруэлл</p>
+            <p>Антиутопия о тоталитарном обществе под постоянным наблюдением Большого Брата.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="book-item">
+        <a href="https://1.librebook.me/fahrenheit_451" target="_blank">
+          <img src="img/fahrenheit.jpg" alt="451° по Фаренгейту" class="book-cover">
+          <div class="book-info">
+            <h4>451° по Фаренгейту</h4>
+            <p>Автор: Рэй Брэдбери</p>
+            <p>Мир, где книги запрещены, а пожарные сжигают их.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="detective-books" class="book-list" style="display:none;">
+      <h3>Лучшие книги в жанре Детектив:</h3>
+      <div class="book-item">
+        <a href="https://1.librebook.me/the_adventures_of_sherlock_holmes" target="_blank">
+          <img src="img/sherlock.jpg" alt="Шерлок Холмс" class="book-cover">
+          <div class="book-info">
+            <h4>Приключения Шерлока Холмса</h4>
+            <p>Автор: Артур Конан Дойл</p>
+            <p>Классические детективные истории о гениальном сыщике и его верном друге докторе Ватсоне.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="book-item">
+        <a href="https://1.librebook.me/ten_little_niggers" target="_blank">
+          <img src="img/andthen.jpg" alt="Десять негритят" class="book-cover">
+          <div class="book-info">
+            <h4>Десять негритят</h4>
+            <p>Автор: Агата Кристи</p>
+            <p>Десять незнакомцев оказываются на острове, где их одного за другим убивает таинственный преступник.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Жанр: Роман -->
+    <div id="novel-books" class="book-list" style="display:none;">
+      <h3>Лучшие книги в жанре Роман:</h3>
+      <div class="book-item">
+        <a href="https://1.librebook.me/gone_with_the_wind" target="_blank">
+          <img src="img/gonewith.jpg" alt="Унесённые ветром" class="book-cover">
+          <div class="book-info">
+            <h4>Унесённые ветром</h4>
+            <p>Автор: Маргарет Митчелл</p>
+            <p>История любви и выживания во времена Гражданской войны в США.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="book-item">
+        <a href="https://1.librebook.me/little_women" target="_blank">
+          <img src="img/littlewomen.jpg" alt="Маленькие женщины" class="book-cover">
+          <div class="book-info">
+            <h4>Маленькие женщины</h4>
+            <p>Автор: Луиза Мэй Олкотт</p>
+            <p>Трогательная история о взрослении четырёх сестёр в Америке XIX века.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="book-item">
+        <a href="https://1.librebook.me/anna_karenina/" target="_blank">
+          <img src="img/annakarenina.jpg" alt="Анна Каренина" class="book-cover">
+          <div class="book-info">
+            <h4>Анна Каренина</h4>
+            <p>Автор: Лев Толстой</p>
+            <p>Трагическая история любви замужней женщины к блестящему офицеру.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Жанр: Триллер -->
+    <div id="thriller-books" class="book-list" style="display:none;">
+      <h3>Лучшие книги в жанре Триллер:</h3>
+      <div class="book-item">
+        <a href="https://1.librebook.me/the_da_vinci_code" target="_blank">
+          <img src="img/davinci.jpg" alt="Код да Винчи" class="book-cover">
+          <div class="book-info">
+            <h4>Код да Винчи</h4>
+            <p>Автор: Дэн Браун</p>
+            <p>Профессор символогии оказывается втянут в опасное расследование многовекового заговора.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="book-item">
+        <a href="https://1.librebook.me/the_green_mile" target="_blank">
+          <img src="img/greenmile.jpg" alt="Зелёная миля" class="book-cover">
+          <div class="book-info">
+            <h4>Зелёная миля</h4>
+            <p>Автор: Стивен Кинг</p>
+            <p>История о необычном заключённом и надзирателях тюрьмы смертников.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="book-item">
+        <a href="https://1.librebook.me/gone_girl" target="_blank">
+          <img src="img/gonegirl.jpg" alt="Исчезнувшая" class="book-cover">
+          <div class="book-info">
+            <h4>Исчезнувшая</h4>
+            <p>Автор: Джиллиан Флинн</p>
+            <p>Мужчина становится главным подозреваемым в исчезновении своей жены.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <button id="back-button" style="display:none;" onclick="hideBooks()">← Назад к жанрам</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Моя книжная полка</p>
+  </footer>
+
+  <script>
+    function showBooks(genre) {
+      // Скрываем все списки книг
+      document.querySelectorAll('.book-list').forEach(el => {
+        el.style.display = 'none';
+      });
+      
+      // Показываем выбранный жанр
+      document.getElementById(genre + '-books').style.display = 'block';
+      
+      // Показываем кнопку "Назад"
+      document.getElementById('back-button').style.display = 'block';
+      
+      // Прокручиваем к списку книг
+      document.getElementById(genre + '-books').scrollIntoView({behavior: 'smooth'});
+    }
+    
+    function hideBooks() {
+      // Скрываем все списки книг
+      document.querySelectorAll('.book-list').forEach(el => {
+        el.style.display = 'none';
+      });
+      
+      // Скрываем кнопку "Назад"
+      document.getElementById('back-button').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
